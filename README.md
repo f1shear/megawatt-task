@@ -29,3 +29,9 @@
 ## Run Server locally
 
 	$ python manage.py runserver
+
+
+## Run Tests
+
+    $ python manage.py test
+
