@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <h2>Site Details - {{object.name}}</h2>
+
+    <table class='table table-bordered'>
+    	<thead>
+			<th> Date </th>
+			<th> A Value </th>
+			<th> B Value </th>
+    	</thead>
+    	<tbody>
+    	{% for entry in data %}
+			<tr>
+				<td> {{entry.created_on|date}} </td>
+				<td> {{entry.a_value}} </td>
+				<td> {{entry.b_value}} </td>
+			</tr>
+    	{% endfor %}
+		</tbody>
+    </table>
+
+{% endblock %}

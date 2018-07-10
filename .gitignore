@@ -1,0 +1,47 @@
+
+
+# Django & Python
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+# Local
+db.sqlite3
+venv/
+env/
+
+# Static
+staticfiles/
+staticdev/node_modules/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+

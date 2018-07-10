@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <h2> Summary </h2>
+	
+	<a href='/summary/' class='btn btn-default btn-primary {% ifequal request.path "/summary/" %} active {% endifequal %}'> Sum </a>
+    <a href='/summary-average/' class='btn btn-default btn-primary  {% ifequal request.path "/summary-average/" %} active {% endifequal %}''> Average </a>
+
+	<br><br>
+
+    <table class='table table-bordered'>
+    	<thead>
+    		<th> Site </th>
+    		<th> A Value </th>
+    		<th> B Value </th>
+    	</thead>
+
+    	<tbody>
+        {% for entry in summary %}
+            <tr>
+                <td>
+                    <a href='{% url "site-detail" entry.site %}'>{{ entry.site__name }}</a>
+                </td>
+            	<td>
+            	   {{ entry.a_value__avg | floatformat:2 }}
+                </td>
+            	<td>
+            	   {{ entry.b_value__avg | floatformat:2 }}
+                </td>
+        	</tr>
+        {% endfor %}
+    	</tbody>
+    </table>
+{% endblock %}
