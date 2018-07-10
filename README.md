@@ -7,7 +7,7 @@
 
 ## Setup
 
-	Configure database in settings.py
+	# Configure database in settings.py
 
 	$ python manage.py migrate
 
